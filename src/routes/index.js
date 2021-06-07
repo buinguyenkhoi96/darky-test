@@ -1,4 +1,10 @@
 import Home from './App';
-import {} from '../common/Theme';
+import { ThemeProvider } from '../theme';
 
-export default Home;
+const Routes = () => (
+  <ThemeProvider>
+    <Home />
+  </ThemeProvider>
+);
+
+export default Routes;

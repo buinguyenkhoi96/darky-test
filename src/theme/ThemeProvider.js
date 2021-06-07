@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import ThemeContext from './ThemeContext';
 
 const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
   useEffect(() => {
-    document.body.setAttribute('data-theme-mode', isDarkMode ? 'dark' : 'light')
+    document.body.setAttribute('data-theme', isDarkMode ? 'dark' : 'light')
   }, [isDarkMode]);
 
   return (
