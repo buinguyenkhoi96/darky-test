@@ -20,8 +20,15 @@ function App() {
           onClick={() => setIsDarkMode(!isDarkMode)}
         >
           <FontAwesomeIcon
-            icon={isDarkMode ? faMoon : faSun}
-            color={isDarkMode ? 'white' : '#FFA500'}
+            {...(isDarkMode ?
+            {
+              icon: faMoon,
+              color: 'white',
+            } :
+            {
+              icon: faSun,
+              color: '#FFA500',
+            })}
           />
         </button>
 
